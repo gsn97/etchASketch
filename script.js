@@ -23,3 +23,11 @@ function loadCell () {
     canvas.appendChild(cell); 
 };
 
+function loadCanvasGrid () {
+    for (i = 1; i <= (rowAmount ** 2); i++) {
+        loadCell();
+    }
+};
+
+
+
