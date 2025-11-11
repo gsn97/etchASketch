@@ -8,7 +8,8 @@ body.style.alignItems = `center`;
 const canvasSizeNum = 750;
 const canvasSize = canvasSizeNum + `px`;
 
-let rowAmount = 16; // grid will be (rowAmount x rowAmount)
+let rowAmount = 3; // grid will be (rowAmount x rowAmount)
+let color = "black"; // color picker var
 
 const canvas = document.querySelector(`#canvas`);
 canvas.style.width = canvasSize;
@@ -25,7 +26,9 @@ function loadCell () {
     cell.style.width = cellSize;
     cell.style.height = cellSize;
     cell.style.backgroundColor = `white`;
-    cell.style.flexShrink = 0;
+    cell.addEventListener(`mouseover`, (e) => {
+        cell.style.backgroundColor = color;
+    });
     canvas.appendChild(cell);
 };
 
