@@ -1,5 +1,3 @@
-const makeDiv = (document.createElement(`div`));
-
 const body = document.querySelector(`body`);
 body.style.backgroundColor = `tan`;
 
@@ -8,14 +6,14 @@ const canvasSize = canvasSizeNum + `px`;
 
 let rowAmount = 10;
 
-const canvas = makeDiv;
+const canvas = document.querySelector(`#canvas`);
 canvas.style.width = canvasSize;
 canvas.style.height = canvasSize;
 canvas.style.border = `solid 2px black`;
 body.appendChild(canvas);
 
 function loadCell () {
-    const cell = makeDiv;
+    const cell = document.createElement(`div`);
     const cellSize = (canvasSizeNum / rowAmount) + `px`;
     cell.style.width = cellSize;
     cell.style.height = cellSize;
@@ -26,8 +24,7 @@ function loadCell () {
 function loadCanvasGrid () {
     for (i = 1; i <= (rowAmount ** 2); i++) {
         loadCell();
-    }
+    };
 };
 
-
-
+loadCanvasGrid();
