@@ -1,5 +1,6 @@
 const body = document.querySelector(`body`);
 body.style.backgroundColor = `tan`;
+body.style.display = `flex`;
 
 const canvasSizeNum = 500;
 const canvasSize = canvasSizeNum + `px`;
@@ -10,6 +11,7 @@ const canvas = document.querySelector(`#canvas`);
 canvas.style.width = canvasSize;
 canvas.style.height = canvasSize;
 canvas.style.border = `solid 2px black`;
+canvas.style.display = `flex`;
 body.appendChild(canvas);
 
 function loadCell () {
@@ -18,7 +20,7 @@ function loadCell () {
     cell.style.width = cellSize;
     cell.style.height = cellSize;
     cell.style.backgroundColor = `white`;
-    canvas.appendChild(cell); 
+    canvas.appendChild(cell);
 };
 
 function loadCanvasGrid () {
