@@ -5,7 +5,7 @@ body.style.display = `flex`;
 const canvasSizeNum = 500;
 const canvasSize = canvasSizeNum + `px`;
 
-let rowAmount = 10;
+let rowAmount = 16; // grid will be (rowAmount x rowAmount)
 
 const canvas = document.querySelector(`#canvas`);
 canvas.style.width = canvasSize;
@@ -26,6 +26,7 @@ function loadCell () {
 function loadCanvasGrid () {
     for (i = 1; i <= (rowAmount ** 2); i++) {
         loadCell();
+        canvas.lastChild.id = `cellNum` + i;
     };
 };
 
